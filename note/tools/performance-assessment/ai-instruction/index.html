@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7961518695832179"
+       crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="수행평가 결과표의 확정 조건과 학생이 입력한 주제·자료·관점을 바탕으로 개요, 초안, 제출원고용 AI 작업 지시문을 만듭니다.">
+<link rel="stylesheet" href="/assets/remap.css">
+<link rel="stylesheet" href="style.css">
+<title>4단계 AI 작업 지시문 | 수행평가 작성 준비</title>
+<link rel="stylesheet" href="/assets/hierarchy.css"></head>
+<body class="series-note">
+<header class="top"><div class="wrap"><a href="../">← 수행평가 작성 준비</a><small>4단계 / 4단계 · AI 활용은 학생이 선택합니다.</small></div></header>
+<section class="hero"><div class="wrap"><small>STEP 4 · AI INSTRUCTION</small><h1>AI 작업 지시문 만들기</h1><p>결과표의 확정 작성조건을 고정한 뒤, 학생이 정한 주제·관점·자료를 바탕으로 개요용·초안용·제출원고용 지시문 중 필요한 것만 만듭니다.</p></div></section>
+<main class="app">
+<nav class="progress" aria-label="전체 진행 단계"><div class="done">1 자료 입력</div><div class="done">2 작성조건 검토</div><div class="done">3 결과표 출력</div><div class="active">4 AI 지시문</div></nav>
+<section class="summary"><div><h2>이 단계에서 만드는 결과</h2><p>AI가 답안을 임의로 정하지 않도록 학생의 선택과 자료를 구조화한 작업 지시문을 만듭니다. 실제 AI 실행과 최종 제출은 학생이 결정합니다.</p></div><strong>출력: 3종 AI 지시문</strong></section>
+<div class="substeps"><div class="active" id="s1">1. 결과표 조건</div><div id="s2">2. 학생 입력</div><div id="s3">3. 작업 선택</div><div id="s4">4. 지시문 출력</div></div>
+<div id="missing" class="notice bad hidden">3단계 결과표가 없습니다. <a href="../results/">결과표 화면으로 이동</a>해 먼저 만들어 주세요.</div>
+<section id="work" class="hidden">
+<div class="notice purple">이 화면은 과제를 직접 작성하지 않습니다. 학생이 AI에 전달할 작업 범위·자료·금지사항·출력 형식을 정리합니다.</div>
+<section class="panel"><h2>1. 결과표에서 가져온 확정 작성조건</h2><p>아래 조건은 AI 지시문에 자동으로 들어가며 임의로 삭제하지 않습니다.</p><div id="requirements" class="requirements"></div><div id="unresolved" class="notice hidden" style="margin-top:12px"></div><div class="toolbar"><a class="btn secondary" href="../results/">결과표 다시 보기</a></div></section>
+<section class="panel"><h2>2. 학생이 직접 입력할 내용</h2><p>주제·관점·현재 작성본은 AI가 대신 정하지 않습니다. 개인정보는 입력하지 마세요.</p><div class="grid">
+<div class="field full"><label for="topic">주제 *</label><input id="topic" maxlength="300" placeholder="예: 조선 후기 세도정치가 백성의 생활에 끼친 영향"></div>
+<div class="field full"><label for="purpose">핵심 질문·작성 목적</label><textarea id="purpose" placeholder="이 글에서 무엇을 설명·비교·판단하려는지 입력"></textarea></div>
+<div class="field full"><label for="position">학생의 핵심 관점·주장</label><textarea id="position" placeholder="학생이 말하려는 판단. 초안에는 권장, 제출원고에는 필수"></textarea></div>
+<div class="field full"><label for="current">현재 작성본·메모·개요</label><textarea id="current" class="long" placeholder="이미 작성한 개요나 초안을 붙여 넣으세요. 제출원고 지시문에는 초안이 필수입니다."></textarea></div>
+<div class="field"><label for="include">반드시 포함할 내용</label><textarea id="include" placeholder="한 줄에 하나"></textarea></div>
+<div class="field"><label for="exclude">포함하지 않을 내용</label><textarea id="exclude" placeholder="한 줄에 하나"></textarea></div>
+<div class="field"><label for="style">희망 문체·수준</label><input id="style" maxlength="400" placeholder="예: 고등학생 수준의 쉬운 설명문"></div>
+<div class="field"><label for="structure">희망 구조</label><input id="structure" maxlength="700" placeholder="예: 서론-본론-결론"></div>
+<div class="field full"><div class="check"><input id="privacyConfirm" type="checkbox"><label for="privacyConfirm">이름·학번·학교명·연락처 등 개인정보를 입력하지 않았습니다.</label></div></div>
+</div></section>
+<section class="panel"><h2>3. AI 활용 범위를 학생이 선택하세요</h2><p>교사가 안내한 규정에 맞춰 선택합니다. 사용 금지이거나 규정을 모르면 제출원고 지시문은 만들 수 없습니다.</p><div class="grid"><div class="field"><label for="policy">AI 활용 규정 *</label><select id="policy"><option value="">선택하세요</option><option value="ALLOWED">AI 활용 허용</option><option value="PARTIAL">일부 단계만 허용</option><option value="UNKNOWN">안내 없음·확인 전</option><option value="PROHIBITED">AI 사용 금지</option></select></div><div class="field"><label for="policyNote">교사 안내·사용 기록 조건</label><input id="policyNote" maxlength="500" placeholder="예: 개요와 문장 교정만 허용, 사용 기록 제출"></div></div><div class="check-grid"><div class="check"><input id="allowOutline" type="checkbox"><label for="allowOutline">개요 작업 허용</label></div><div class="check"><input id="allowDraft" type="checkbox"><label for="allowDraft">초안 작업 허용</label></div><div class="check"><input id="allowFinal" type="checkbox"><label for="allowFinal">제출원고 정리 허용</label></div></div><div id="policyStatus" class="notice" style="margin-top:12px">AI 활용 규정을 선택하세요.</div></section>
+<section class="panel"><h2>4. 사용할 첨부자료</h2><p>파일 자체가 아니라 자료명·출처·핵심 내용과 검증 상태를 입력합니다. 자료가 없으면 AI가 출처를 만들지 않도록 지시합니다.</p><div class="toolbar"><button class="btn secondary" id="addMaterial">자료 카드 추가</button></div><div id="materials"></div></section>
+<section class="panel"><h2>5. 필요한 AI 지시문을 선택해 출력하세요</h2><p>세 지시문은 독립적으로 생성됩니다. 필요한 작업만 선택합니다.</p><div class="modes">
+<article class="mode"><strong>개요용</strong><p>본문을 쓰지 않고 글의 구조·문단 목적·자료 배치만 요청합니다.</p><ul><li>소제목과 문단 순서</li><li>문단별 핵심 질문</li><li>자료 사용 위치</li><li>추가 확인 표시</li></ul><div id="stateOutline" class="state">입력 상태 확인 중</div><button class="btn" data-mode="OUTLINE">개요용 지시문 만들기</button></article>
+<article class="mode"><strong>초안용</strong><p>학생이 검토하고 수정할 전체 초안을 요청합니다.</p><ul><li>학생 판단 임의 생성 금지</li><li>확인 전 사실 표시</li><li>사용 자료 연결</li><li>보완 항목 별도 출력</li></ul><div id="stateDraft" class="state">입력 상태 확인 중</div><button class="btn" data-mode="DRAFT">초안용 지시문 만들기</button></article>
+<article class="mode final"><strong>제출원고용</strong><p>학생이 이미 쓴 초안을 확정 조건에 맞게 정리하도록 요청합니다.</p><ul><li>기존 초안 필수</li><li>학생 관점 필수</li><li>검증 자료 필수</li><li>주의사항 자동 첨부</li></ul><div id="stateFinal" class="state">입력 상태 확인 중</div><button class="btn gold" data-mode="FINAL">제출원고용 지시문 만들기</button></article>
+</div></section>
+<section class="panel"><h2>저장된 지시문</h2><p>현재 결과표에 맞춰 만든 지시문만 현재 탭에 임시 저장됩니다.</p><div id="saved" class="saved"><div class="notice">아직 만든 지시문이 없습니다.</div></div></section>
+<section id="result" class="result hidden"><div class="result-head"><h2 id="resultTitle">AI 작업 지시문</h2><span id="resultMeta"></span></div><textarea id="instruction" spellcheck="false"></textarea><pre id="printInstruction" class="print-instruction" aria-hidden="true"></pre><div class="toolbar"><button class="btn gold" id="copy">지시문 복사</button><button class="btn secondary" id="print">지시문 인쇄</button><button class="btn secondary" id="closeResult">닫기</button></div></section>
+</section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
