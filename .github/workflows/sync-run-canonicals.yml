@@ -1,0 +1,113 @@
+name: Sync RUN canonicals
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sync-run-canonicals.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Copy completed RUN canonicals from former monorepo
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE='https://raw.githubusercontent.com/4th-season/4th-season.github.io/main/learn/note/grammar'
+          copy_page() {
+            src="$1"
+            dst="$2"
+            mkdir -p "$(dirname "$dst")"
+            curl -fsSL "$BASE/$src" -o "$dst"
+            echo "copied $src -> $dst"
+          }
+
+          copy_page 'language/language-and-human/index.html' 'note/grammar/language/language-and-human/index.html'
+          copy_page 'language/sign-properties/index.html' 'note/grammar/language/sign-properties/index.html'
+          copy_page 'language/structural-properties/index.html' 'note/grammar/language/structural-properties/index.html'
+          copy_page 'language/language-functions/index.html' 'note/grammar/language/language-functions/index.html'
+          copy_page 'language/korean-characteristics/index.html' 'note/grammar/language/korean-characteristics/index.html'
+          copy_page 'language/korean-english-sentence-structure/index.html' 'note/grammar/language/korean-english-sentence-structure/index.html'
+
+          copy_page 'sound-letter/letters-sounds/index.html' 'note/grammar/sound-letter/letters-sounds/index.html'
+          copy_page 'sound-letter/phoneme/index.html' 'note/grammar/sound-letter/phoneme/index.html'
+          copy_page 'sound-letter/consonant-system/index.html' 'note/grammar/sound-letter/consonant-system/index.html'
+          copy_page 'sound-letter/three-way-contrast/index.html' 'note/grammar/sound-letter/three-way-contrast/index.html'
+          copy_page 'sound-letter/vowel-system/index.html' 'note/grammar/sound-letter/vowel-system/index.html'
+          copy_page 'sound-letter/syllable-structure/index.html' 'note/grammar/sound-letter/syllable-structure/index.html'
+          copy_page 'sound-letter/minimal-pair/index.html' 'note/grammar/sound-letter/minimal-pair/index.html'
+          copy_page 'sound-letter/allophone/index.html' 'note/grammar/sound-letter/allophone/index.html'
+          copy_page 'sound-letter/complementary-distribution/index.html' 'note/grammar/sound-letter/complementary-distribution/index.html'
+
+      - name: Activate existing hub cards for copied pages
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          def activate(path, mapping):
+              p = Path(path)
+              text = p.read_text(encoding='utf-8')
+              original = text
+              for title, href in mapping:
+                  pat = re.compile(
+                      r'(<(?:a|div)\s+class="sequence-row(?: readonly)?"[^>]*>)'
+                      r'(<div><h3>' + re.escape(title) + r'</h3>.*?<span class="open">.*?</span>)'
+                      r'(</(?:a|div)>)',
+                      re.S,
+                  )
+                  def repl(m):
+                      opener = m.group(1)
+                      sm = re.search(r'\sstyle="([^"]*)"', opener)
+                      style = f' style="{sm.group(1)}"' if sm else ''
+                      return f'<a class="sequence-row" href="{href}"{style}>' + m.group(2) + '</a>'
+                  text, n = pat.subn(repl, text, count=1)
+                  print(path, title, 'activated' if n else 'not-found-or-already-different')
+              if text != original:
+                  p.write_text(text, encoding='utf-8')
+
+          activate('note/grammar/language/index.html', [
+              ('언어와 인간 ― 생각과 관계를 만드는 말', '/learn/note/grammar/language/language-and-human/'),
+              ('언어의 기호적 특성 ― 자의성·사회성·역사성', '/learn/note/grammar/language/sign-properties/'),
+              ('언어의 구조적 특성 ― 체계와 규칙으로 움직이는 말', '/learn/note/grammar/language/structural-properties/'),
+              ('언어의 특성과 기능 ― 언어는 어떻게 작동하는가', '/learn/note/grammar/language/language-functions/'),
+              ('국어의 특성 ― 한국어의 말소리·단어·문장 특징', '/learn/note/grammar/language/korean-characteristics/'),
+              ('국어와 영어 문장 구조의 차이', '/learn/note/grammar/language/korean-english-sentence-structure/'),
+          ])
+
+          activate('note/grammar/sound-letter/index.html', [
+              ('글자와 소리 ― 눈으로 보는 기호와 귀로 듣는 말소리', '/learn/note/grammar/sound-letter/letters-sounds/'),
+              ('음운의 뜻 ― 뜻을 구별하는 가장 작은 말소리', '/learn/note/grammar/sound-letter/phoneme/'),
+              ('국어 자음 체계 ― 조음 위치와 조음 방법', '/learn/note/grammar/sound-letter/consonant-system/'),
+              ('삼지적 상관속 ― 예사소리·된소리·거센소리', '/learn/note/grammar/sound-letter/three-way-contrast/'),
+              ('국어 모음 체계 ― 단모음과 이중 모음', '/learn/note/grammar/sound-letter/vowel-system/'),
+              ('음절의 뜻과 구조 ― 초성·중성·종성으로 나누기', '/learn/note/grammar/sound-letter/syllable-structure/'),
+              ('최소 대립쌍 ― 한 소리 차이로 뜻을 구별하는 법', '/learn/note/grammar/sound-letter/minimal-pair/'),
+              ('변이음 ― 같은 음운이 다르게 실현되는 이유', '/learn/note/grammar/sound-letter/allophone/'),
+              ('상보적 분포 ― 두 소리가 나타나는 자리가 겹치지 않을 때', '/learn/note/grammar/sound-letter/complementary-distribution/'),
+          ])
+
+      - name: Commit synchronized RUN pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/sync-run-canonicals.yml
+          git add note/grammar/language note/grammar/sound-letter
+          if git diff --cached --quiet; then
+            echo 'No content changes.'
+            exit 0
+          fi
+          git commit -m 'Publish migrated RUN grammar canonicals in Learn Pages repo'
+          git push origin main
