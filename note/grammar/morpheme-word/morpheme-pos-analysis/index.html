@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>형태소 분석과 품사 분석의 차이 | 나누기와 분류하기</title>
+<meta name="description" content="형태소 분석과 품사 분석의 차이를 설명합니다. 형태소는 뜻을 가진 최소 단위로 나누고, 품사는 단어를 기능·형태·의미에 따라 분류합니다. 조사와 어미, 용언 활용형을 어떻게 다르게 처리하는지 예문으로 정리합니다.">
+<link rel="canonical" href="https://4th-season.com/learn/note/grammar/morpheme-word/morpheme-pos-analysis/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="형태소 분석과 품사 분석의 차이 | 나누기와 분류하기">
+<meta property="og:description" content="같은 문장을 형태소와 품사라는 서로 다른 층위에서 분석하는 법, 조사와 어미를 헷갈리지 않는 기준을 정리합니다.">
+<meta property="og:url" content="https://4th-season.com/learn/note/grammar/morpheme-word/morpheme-pos-analysis/">
+<style>
+:root{--ink:#202a35;--muted:#61707c;--line:#dfe4dc;--deep:#59633f;--soft:#f2f4eb;--blue:#eef4f9;--warn:#fff7e6}*{box-sizing:border-box}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;color:var(--ink);line-height:1.82}body{margin:0}.shell{max-width:920px;margin:0 auto;padding:42px 24px 96px}.breadcrumb{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px;color:var(--muted);font-size:.86rem}.breadcrumb a{color:inherit;text-decoration:none}.cover{padding:38px 40px;border-radius:24px;background:var(--deep);color:#fff;margin-bottom:24px}.label{font-size:.8rem;letter-spacing:.08em;font-weight:800;opacity:.82}.cover h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.2;margin:.45rem 0 1rem}.summary,.point,.note{padding:17px 19px;border-radius:14px;margin:18px 0}.summary{background:var(--soft);border:1px solid #dde3d3;font-weight:700}.point{background:var(--blue);border-left:5px solid #627a92}.note{background:var(--warn);border-left:5px solid #9a6f1c}h2{margin:46px 0 10px;padding-bottom:10px;border-bottom:2px solid #e1e5dc;color:#59633f;font-size:1.45rem}.toc{margin:24px 0 34px;padding:18px 20px;border:1px solid var(--line);border-radius:16px}.toc ol{columns:2;padding-left:1.3rem}.toc a,a{color:#586d3f;text-decoration:none}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;margin:18px 0}.table-wrap table{width:100%;border-collapse:collapse;min-width:720px;font-size:.94rem}.table-wrap th,.table-wrap td{padding:12px 13px;border-bottom:1px solid #e5e9e2;border-right:1px solid #e8ece5;text-align:left;vertical-align:top}.table-wrap th{background:var(--soft);color:#59633f}.analysis{padding:19px;border:1px solid var(--line);border-radius:15px;background:#fbfcf9;margin:18px 0}.formula{font-weight:800;color:#59633f}.steps{display:grid;gap:12px}.step{padding:16px 18px;border:1px solid var(--line);border-radius:13px}.links{display:grid;gap:10px;margin-top:14px}.links a{display:block;padding:13px 15px;border:1px solid #dce3d5;border-radius:11px;background:#fff;font-weight:700}@media(max-width:720px){.shell{padding:28px 16px 72px}.cover{padding:28px 22px}.toc ol{columns:1}}
+</style>
+</head>
+<body><main class="shell">
+<nav class="breadcrumb" aria-label="경로"><a href="/">4번째 계절</a><span>›</span><a href="/learn/">문해력과 고전</a><span>›</span><a href="/learn/note/">Note</a><span>›</span><a href="/learn/note/grammar/">문법관</a><span>›</span><a href="/learn/note/grammar/morpheme-word/">형태소와 단어 형성</a><span>›</span><span>형태소 분석과 품사 분석</span></nav>
+<header class="cover"><div class="label">NOTE · GRAMMAR · ANALYSIS LEVELS</div><h1>형태소 분석과 품사 분석의 차이</h1><p>형태소 분석은 말을 뜻을 가진 최소 단위로 나누는 일이고, 품사 분석은 단어를 문법적 성질에 따라 분류하는 일입니다. 같은 표현을 보더라도 분석 층위가 다르므로 결과가 같을 필요가 없습니다.</p></header>
+<div class="summary"><strong>형태소 분석 = 내부 구조를 나누기</strong><br><strong>품사 분석 = 단어의 갈래를 분류하기</strong><br>특히 <strong>조사는 단어이자 형태소</strong>로 볼 수 있지만, <strong>어미는 형태소이되 학교 문법의 품사는 아닙니다.</strong></div>
+<nav class="toc" aria-label="목차"><strong>목차</strong><ol><li><a href="#s1">두 분석은 무엇이 다른가</a></li><li><a href="#s2">형태소 분석</a></li><li><a href="#s3">품사 분석</a></li><li><a href="#s4">같은 문장 두 방식 분석</a></li><li><a href="#s5">조사와 어미가 갈리는 이유</a></li><li><a href="#s6">어간과 형태소도 같은 말이 아니다</a></li><li><a href="#s7">문장 성분과도 구별하기</a></li><li><a href="#s8">문제 풀이 순서</a></li></ol></nav>
+
+<h2 id="s1">1. 두 분석은 ‘대상’과 ‘결과 단위’가 다르다</h2>
+<p>표준국어대사전은 형태소를 <strong>뜻을 가진 가장 작은 말의 단위</strong>로 풀이합니다. 반면 품사는 <strong>단어를 기능·형태·의미에 따라 나눈 갈래</strong>입니다. 따라서 형태소 분석은 한 단어 안으로 더 들어가 최소 단위를 찾을 수 있지만, 품사 분석은 기본적으로 단어가 어느 문법적 갈래에 속하는지를 판단합니다.</p>
+<div class="table-wrap"><table><thead><tr><th>구분</th><th>형태소 분석</th><th>품사 분석</th></tr></thead><tbody><tr><td>핵심 질문</td><td>어떤 최소 의미 단위들로 이루어졌는가?</td><td>이 단어는 어떤 품사인가?</td></tr><tr><td>주요 결과</td><td>어근·접사·어간·어미·조사 등 형태소</td><td>명사·대명사·수사·동사·형용사·관형사·부사·조사·감탄사</td></tr><tr><td>관심 층위</td><td>단어 내부까지 분석</td><td>단어의 문법적 갈래</td></tr></tbody></table></div>
+
+<h2 id="s2">2. 형태소 분석 — 뜻이나 문법 기능을 가진 최소 단위까지 나눈다</h2>
+<p>형태소는 어휘적인 뜻뿐 아니라 시제·관계·종결처럼 문법적인 뜻을 나타내는 요소도 포함합니다. 그래서 용언의 활용형을 형태소로 분석하면 어간과 어미가 나뉩니다.</p>
+<div class="analysis"><p class="formula">먹었다 → 먹- / -었- / -다</p><p><b>먹-</b>: 중심 의미를 가진 어간</p><p><b>-었-</b>: 과거를 나타내는 선어말 어미</p><p><b>-다</b>: 문장을 끝맺는 어말 어미</p></div>
+<p>다만 형태소 분석은 문법 이론에 따라 경계가 달라질 수 있습니다. 국립국어원도 구체적인 형태소 분석에서 견해차가 있을 수 있으므로 학생은 교과서의 분석 기준을 따르라고 안내합니다.</p>
+
+<h2 id="s3">3. 품사 분석 — 단어를 기능·형태·의미에 따라 분류한다</h2>
+<p>품사는 형태소의 종류를 나열하는 체계가 아니라 <strong>단어의 갈래</strong>입니다. 예를 들어 ‘먹었다’는 여러 형태소로 이루어졌지만 품사는 여전히 동사 ‘먹다’의 활용형입니다. ‘예쁘게’도 문장 안에서 부사어 역할을 하더라도 품사는 형용사 ‘예쁘다’의 활용형입니다.</p>
+<div class="point"><strong>품사와 문장 성분도 다릅니다.</strong> ‘예쁘게’는 품사로는 형용사이지만, “옷을 예쁘게 입는다”에서는 문장 성분으로 부사어입니다.</div>
+
+<h2 id="s4">4. 같은 문장을 세 층위로 보면 차이가 선명하다</h2>
+<p>문장 <strong>“철수가 밥을 먹었다.”</strong>를 어절·품사·형태소 층위로 나누어 보겠습니다.</p>
+<div class="table-wrap"><table><thead><tr><th>층위</th><th>분석 결과</th><th>무엇을 보는가</th></tr></thead><tbody><tr><td>어절</td><td>철수가 / 밥을 / 먹었다</td><td>띄어쓰기 단위</td></tr><tr><td>단어·품사</td><td>철수(명사) + 가(조사) / 밥(명사) + 을(조사) / 먹었다(동사 활용형)</td><td>단어의 문법적 갈래</td></tr><tr><td>형태소</td><td>철수 / 가 / 밥 / 을 / 먹- / -었- / -다</td><td>뜻을 가진 최소 단위</td></tr></tbody></table></div>
+<p>이 표에서 중요한 점은 <strong>한 어절이 반드시 한 단어인 것도 아니고, 한 단어가 반드시 한 형태소인 것도 아니라는 것</strong>입니다.</p>
+
+<h2 id="s5">5. 조사와 어미를 보면 품사 분석의 경계가 보인다</h2>
+<p>한국어 학교 문법에서는 조사를 다른 말에 붙여 쓰지만 일반적으로 하나의 단어로 봅니다. 그래서 ‘철수가’의 ‘가’는 형태소 분석에서도 하나의 형태소이고, 품사 분석에서도 조사라는 독립된 품사입니다.</p>
+<p>반면 어미는 용언이 활용할 때 나타나는 형태소이지만 품사로 다루지 않습니다. ‘먹었다’의 ‘-었-’, ‘-다’를 각각 품사라고 적으면 안 됩니다.</p>
+<div class="note"><strong>기억할 경계:</strong> 조사 = 붙여 쓰지만 단어·품사로 인정되는 경우 / 어미 = 형태소이지만 품사는 아님.</div>
+
+<h2 id="s6">6. ‘어간’과 ‘형태소’도 항상 같은 단위는 아니다</h2>
+<p>형태소 분석에서 또 하나 조심할 점은 어간을 무조건 하나의 형태소라고 보는 것입니다. 국립국어원은 <strong>어간은 활용할 때 변하지 않는 부분</strong>이라는 개념이고, 복합어인 용언의 어간은 형태소가 둘 이상일 수 있다고 설명합니다.</p>
+<div class="analysis"><p class="formula">고요하다 → 고요 / 하- / -다</p><p>‘고요하-’ 전체가 어간이지만 형태소 분석에서는 ‘고요’와 ‘하-’로 더 나뉠 수 있습니다. 따라서 <strong>어간 = 형태소 하나</strong>라는 공식은 성립하지 않습니다.</p></div>
+
+<h2 id="s7">7. 품사와 문장 성분까지 한꺼번에 섞지 않는다</h2>
+<p>국어 문제에서는 형태소, 품사, 문장 성분이 한 문장 안에 동시에 등장할 수 있습니다. 이 세 분석은 서로 연결되지만 질문이 다릅니다.</p>
+<div class="table-wrap"><table><thead><tr><th>분석</th><th>질문</th><th>예: 예쁘게</th></tr></thead><tbody><tr><td>형태소</td><td>어떤 최소 단위인가?</td><td>예쁘- / -게</td></tr><tr><td>품사</td><td>어떤 단어 갈래인가?</td><td>형용사 ‘예쁘다’의 활용형</td></tr><tr><td>문장 성분</td><td>문장 안에서 무슨 역할인가?</td><td>“예쁘게 입는다”에서 부사어</td></tr></tbody></table></div>
+
+<h2 id="s8">8. 문제에서는 ‘무엇을 묻는지’부터 확인한다</h2>
+<div class="steps"><div class="step"><strong>① 형태소로 분석하시오</strong><br>최소 의미 단위까지 나눕니다. 예: 갔다 → 가- / -았- / -다.</div><div class="step"><strong>② 품사를 밝히시오</strong><br>단어의 갈래를 답합니다. 예: 갔다 → 동사 ‘가다’의 활용형.</div><div class="step"><strong>③ 조사를 찾으시오</strong><br>조사는 형태소이면서 학교 문법에서는 단어·품사로 인정되므로 두 지식이 함께 필요합니다.</div><div class="step"><strong>④ 문장 성분을 밝히시오</strong><br>품사와 별개로 실제 문장 속 역할을 판단합니다.</div></div>
+<div class="note"><strong>시험 주의:</strong> 형태소 경계나 일부 분석 방식에는 견해차가 있을 수 있습니다. 문제에 교과서·제시문 기준이 주어지면 그 기준을 우선합니다.</div>
+
+<h2>이어 읽기</h2>
+<div class="links"><a href="/learn/note/grammar/morpheme-word/overview/">형태소와 단어 — 뜻을 가진 최소 단위부터 단어까지</a><a href="/learn/note/grammar/morpheme-word/transformative-ending-affix/">전성 어미와 접사 — 활용과 파생을 구별하는 법</a><a href="/learn/note/grammar/morpheme-word/word-structure/">단어의 구조 — 어근·접사·직접 구성 성분</a><a href="/learn/note/grammar/morpheme-word/">형태소와 단어 형성 전체 지도</a></div>
+
+<h2>공식 기준 확인</h2>
+<ul><li><a href="https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&pageIndex=1&qna_seq=330360">국립국어원 — 형태소의 정의</a></li><li><a href="https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=261&pageIndex=1&qna_seq=314224">국립국어원 — 조사와 단어·품사</a></li><li><a href="https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=261&pageIndex=1&qna_seq=316919">국립국어원 — 어미는 품사인가</a></li><li><a href="https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=90&pageIndex=1&qna_seq=328629">국립국어원 — 품사와 문장 성분 구별</a></li></ul>
+</main></body></html>
