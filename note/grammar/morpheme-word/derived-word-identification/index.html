@@ -1,1 +1,55 @@
-placeholder
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>파생어 판별 | 접사의 기능과 품사 변화 확인하기</title>
+<meta name="description" content="파생어를 판별하는 순서를 설명합니다. 직접 구성 성분을 먼저 찾고 접사 여부를 사전에서 확인한 뒤, 접사가 더하는 뜻과 결과 품사, 전성 어미와의 경계를 단계별로 점검합니다.">
+<link rel="canonical" href="https://4th-season.com/learn/note/grammar/morpheme-word/derived-word-identification/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="파생어 판별 | 접사의 기능과 품사 변화 확인하기">
+<meta property="og:description" content="직접 구성 성분·접사 확인·접사의 기능·품사 변화·동형 어미를 차례로 점검해 파생어를 판별하는 방법을 정리합니다.">
+<meta property="og:url" content="https://4th-season.com/learn/note/grammar/morpheme-word/derived-word-identification/">
+<style>
+:root{--ink:#202a35;--muted:#61707c;--line:#dfe4dc;--deep:#59633f;--soft:#f2f4eb;--blue:#eef4f9;--warn:#fff7e6}*{box-sizing:border-box}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;color:var(--ink);line-height:1.82}body{margin:0}.shell{max-width:920px;margin:0 auto;padding:42px 24px 96px}.breadcrumb{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px;color:var(--muted);font-size:.86rem}.breadcrumb a{color:inherit;text-decoration:none}.cover{padding:38px 40px;border-radius:24px;background:var(--deep);color:#fff;margin-bottom:24px}.label{font-size:.8rem;letter-spacing:.08em;font-weight:800;opacity:.82}.cover h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.2;margin:.45rem 0 1rem}.cover p{margin:0;max-width:760px}.summary,.point,.note{padding:17px 19px;border-radius:14px;margin:18px 0}.summary{background:var(--soft);border:1px solid #dde3d3;font-weight:700}.point{background:var(--blue);border-left:5px solid #627a92}.note{background:var(--warn);border-left:5px solid #9a6f1c}h2{margin:46px 0 10px;padding-bottom:10px;border-bottom:2px solid #e1e5dc;color:#59633f;font-size:1.45rem}h3{margin-top:28px;color:#5b6844}.toc{margin:24px 0 34px;padding:18px 20px;border:1px solid var(--line);border-radius:16px}.toc ol{columns:2;padding-left:1.3rem}.toc a,a{color:#586d3f;text-decoration:none}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:18px 0}.card{padding:17px;border:1px solid var(--line);border-radius:14px;background:#fff}.card strong{display:block;color:#5b6844}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;margin:18px 0}.table-wrap table{width:100%;border-collapse:collapse;min-width:720px;font-size:.94rem}.table-wrap th,.table-wrap td{padding:12px 13px;border-bottom:1px solid #e5e9e2;border-right:1px solid #e8ece5;text-align:left;vertical-align:top}.table-wrap th{background:var(--soft);color:#59633f}.analysis{padding:19px;border:1px solid var(--line);border-radius:15px;background:#fbfcf9;margin:18px 0}.formula{font-weight:800;color:#59633f}.steps{display:grid;gap:12px;margin:18px 0}.step{padding:16px 18px;border:1px solid var(--line);border-radius:13px;background:#fff}.links{display:grid;gap:10px;margin-top:14px}.links a{display:block;padding:13px 15px;border:1px solid #dce3d5;border-radius:11px;background:#fff;font-weight:700}.source-list{font-size:.9rem;color:var(--muted)}.source-list li{margin:.45rem 0}@media(max-width:720px){.shell{padding:28px 16px 72px}.cover{padding:28px 22px}.grid{grid-template-columns:1fr}.toc ol{columns:1}}
+</style>
+</head>
+<body><main class="shell">
+<nav class="breadcrumb" aria-label="경로"><a href="/">4번째 계절</a><span>›</span><a href="/learn/">문해력과 고전</a><span>›</span><a href="/learn/note/">Note</a><span>›</span><a href="/learn/note/grammar/">문법관</a><span>›</span><a href="/learn/note/grammar/morpheme-word/">형태소와 단어 형성</a><span>›</span><span>파생어 판별</span></nav>
+<header class="cover"><div class="label">NOTE · GRAMMAR · DERIVATION</div><h1>파생어 판별</h1><p>접사처럼 보이는 조각이 있다고 곧바로 파생어라고 결론 내리면 틀리기 쉽습니다. 먼저 가장 마지막 직접 구성 성분을 찾고, 그 성분이 실제 접사인지 확인한 다음 접사가 더하는 뜻과 결과 단어의 품사를 살펴야 합니다.</p></header>
+<div class="summary"><strong>파생어 판별의 핵심</strong><br>① 최종 직접 구성 성분을 찾는다 → ② 한쪽이 실제 접사인지 사전에서 확인한다 → ③ 접사가 새 단어를 만드는 기능인지 본다 → ④ 결과 품사와 의미 변화를 확인한다 → ⑤ 같은 모양의 어미·조사와 구별한다.</div>
+<nav class="toc" aria-label="목차"><strong>목차</strong><ol><li><a href="#s1">왜 접사부터 찾으면 위험한가</a></li><li><a href="#s2">직접 구성 성분 먼저 찾기</a></li><li><a href="#s3">접사인지 사전에서 확인하기</a></li><li><a href="#s4">품사가 바뀌어야 파생어인가</a></li><li><a href="#s5">접두사와 접미사의 기능</a></li><li><a href="#s6">같은 모양의 어미와 구별하기</a></li><li><a href="#s7">사전 등재를 절대 기준으로 쓰면 안 되는 이유</a></li><li><a href="#s8">문제 풀이 6단계</a></li></ol></nav>
+<h2 id="s1">1. 파생어는 ‘접사가 보이는가’보다 ‘최종 결합에 접사가 있는가’를 본다</h2>
+<p>파생어와 합성어를 가르는 가장 안전한 출발점은 <strong>직접 구성 성분</strong>입니다. 국립국어원은 직접 구성 성분 가운데 하나가 접사이면 파생어, 접사가 없으면 합성어로 구분할 수 있다고 설명합니다. 그래서 단어 안에 접사가 어딘가 들어 있다는 사실만으로 최종 단어를 파생어라고 하면 안 됩니다.</p>
+<div class="grid"><div class="card"><strong>지우개</strong><p>지우- + -개. 최종 직접 구성 성분 가운데 -개가 접사이므로 파생어입니다.</p></div><div class="card"><strong>덮밥집</strong><p>안쪽의 ‘덮밥’에 복잡한 형성 과정이 있더라도 최종 직접 구성 성분이 덮밥 + 집이라면 전체 단어의 최종 유형은 합성어입니다.</p></div></div>
+<div class="point"><strong>분석 순서:</strong> 전체 형태소를 한꺼번에 세지 말고, 가장 마지막 결합을 먼저 찾습니다.</div>
+<h2 id="s2">2. 사전의 붙임표는 ‘마지막 결합’을 찾는 강한 단서다</h2>
+<p>표준국어대사전과 우리말샘은 많은 복합어에서 붙임표로 직접 구성 성분을 표시합니다. 예를 들어 <strong>지우-개</strong>처럼 나타나면 최종 분석 경계가 지우-와 -개 사이에 있다는 뜻입니다. 다만 사전은 합성어·파생어라는 라벨이나 어근/접사 정보를 모두 직접 제공하지 않으므로, 구성 성분을 다시 검색해 성격을 확인해야 합니다.</p>
+<div class="analysis"><p class="formula">지우-개 → ‘개’를 사전에서 확인 → 접미사 -개 → 파생어</p><p class="formula">꽃-집 → ‘꽃’, ‘집’을 확인 → 둘 다 명사 → 합성어</p></div>
+<p>붙임표가 없다고 곧 단일어라는 뜻도 아닙니다. 소리 변화 때문에 구성 경계를 음절 단위로 표시하기 어려운 복합어도 있으므로 사전의 형태·뜻·접사 항목을 함께 봅니다.</p>
+<div class="links"><a href="/learn/note/grammar/morpheme-word/word-structure/">단어의 구조 ― 직접 구성 성분부터 이해하기</a><a href="/learn/note/grammar/morpheme-word/derived-compound-word/">파생어와 합성어 차이</a></div>
+<h2 id="s3">3. ‘접사처럼 느껴진다’가 아니라 실제 접사 항목인지 확인한다</h2>
+<p>어떤 성분을 접사로 인정하는 데에는 분석 가능성, 비자립성, 생산성, 의미의 독자성 같은 기준이 관여합니다. 따라서 일상적으로 ‘앞에 붙어 뜻을 더하는 것 같다’는 느낌만으로 접두사라고 정하면 위험합니다.</p>
+<div class="grid"><div class="card"><strong>군더더기</strong><p>사전에 군-더더기로 직접 구성 성분이 표시되고 ‘쓸데없는’의 뜻을 더하는 접두사 군-이 확인됩니다. 따라서 파생어로 볼 수 있습니다.</p></div><div class="card"><strong>새싹</strong><p>‘새로 돋아나는 싹’의 새는 현재 표준국어대사전에서 관형사이고 같은 뜻의 접두사 새-는 실려 있지 않습니다. 따라서 현재 사전 기준에서는 합성어로 분석합니다.</p></div></div>
+<div class="note"><strong>주의:</strong> 같은 형태라도 접사인지 어근·단어인지에 대한 분석이 시대나 이론에 따라 달라질 수 있습니다. 학생이라면 교과서·제시문의 분석 체계를 우선합니다.</div>
+<h2 id="s4">4. 품사가 바뀌지 않아도 파생어가 될 수 있다</h2>
+<p><strong>“접미사가 붙어서 품사가 바뀌면 파생어”</strong>는 유용한 단서이지만 완전한 정의는 아닙니다. 접사는 새 단어를 만들지만 결과 품사가 반드시 바뀌는 것은 아닙니다.</p>
+<div class="table-wrap"><table><thead><tr><th>예</th><th>접사의 기능</th><th>품사 변화</th><th>판단 포인트</th></tr></thead><tbody><tr><td>지우개</td><td>-개가 명사를 만듦</td><td>동사 어근 → 명사</td><td>품사 변화가 뚜렷한 파생</td></tr><tr><td>반짝이다</td><td>-이다가 동사를 만듦</td><td>부사/어근 → 동사</td><td>동사 파생</td></tr><tr><td>먹히다</td><td>피동 접사가 피동 의미를 더함</td><td>동사 → 동사</td><td>품사가 유지되어도 파생 가능</td></tr><tr><td>세 시간쯤</td><td>-쯤이 대략의 뜻을 더함</td><td>앞말 품사 자체를 바꾸지 않음</td><td>품사 변화만으로 접사를 판정하면 안 됨</td></tr></tbody></table></div>
+<p>따라서 품사 변화는 <strong>접사의 기능을 이해하는 보조 정보</strong>로 쓰고, 파생어 여부의 첫 기준은 최종 직접 구성 성분에 실제 접사가 들어 있는지를 확인하는 것입니다.</p>
+<h2 id="s5">5. 접두사와 접미사는 모두 새 단어를 만들지만 작동 방식은 다양하다</h2>
+<p>접두사는 어근이나 단어의 앞에, 접미사는 뒤에 붙습니다. 접두사는 흔히 원래 품사를 유지하면서 의미를 제한하거나 강조하는 경우가 많고, 접미사는 새로운 품사를 만들기도 하고 같은 품사 안에서 의미·문법적 성격을 바꾸기도 합니다. 그러나 이를 절대 공식으로 외우기보다 해당 접사 항목의 문법 정보를 확인해야 합니다.</p>
+<div class="grid"><div class="card"><strong>새파랗다</strong><p>새-는 색채 형용사 앞에 붙어 ‘매우 짙고 선명하게’의 뜻을 더하는 접두사입니다. 결과도 형용사입니다.</p></div><div class="card"><strong>지우개·먹보</strong><p>-개와 -보는 명사를 만드는 접미사로, 결과 품사 확인이 접사의 기능을 이해하는 데 도움이 됩니다.</p></div><div class="card"><strong>반짝이다</strong><p>국립국어원은 부사 ‘반짝’에 동사를 만드는 접미사 -이다가 결합한 것으로 설명합니다.</p></div><div class="card"><strong>먹히다</strong><p>피동 접사가 붙어도 동사라는 품사는 유지될 수 있습니다. ‘품사 변화 없음 = 파생어 아님’은 잘못된 공식입니다.</p></div></div>
+<h2 id="s6">6. 같은 모양의 어미와 접사는 ‘새 단어인가, 활용인가’로 구별한다</h2>
+<p>-기, -(으)ㅁ처럼 명사 파생 접미사와 명사형 전성 어미가 같은 형태를 가질 수 있습니다. 이때는 형태가 아니라 기능을 봅니다. 접미사는 새 단어를 만들고, 전성 어미는 용언을 활용하여 문장 안에서 명사와 같은 기능을 하게 할 뿐 원래 품사적 성격을 유지합니다.</p>
+<div class="grid"><div class="card"><strong>줄넘기</strong><p>사전에 명사로 등재된 하나의 단어입니다. 파생 명사와 관련된 -기로 볼 수 있습니다.</p></div><div class="card"><strong>음식물 줄이기</strong><p>문맥에서 동사 ‘줄이다’의 명사형 활용이므로 -기는 전성 어미로 볼 수 있습니다.</p></div></div>
+<div class="links"><a href="/learn/note/grammar/morpheme-word/transformative-ending-affix/">전성 어미와 접사 ― 활용과 파생을 구별하는 법</a><a href="/learn/note/grammar/morpheme-word/affix/">접사의 뜻과 종류 ― 접두사와 접미사</a></div>
+<h2 id="s7">7. 사전에 단어가 없다고 파생어가 아닌 것은 아니다</h2>
+<p>생산적인 접사가 붙은 모든 파생어가 사전에 개별 표제어로 올라오는 것은 아닙니다. 표준국어대사전 편찬 지침은 생산적인 접사가 결합한 파생어를 선별하여 등재할 수 있다고 설명합니다. 반면 -되다·-하다나 피동 접사가 결합해 널리 쓰이는 파생어는 비교적 폭넓게 표제어로 수록됩니다.</p>
+<div class="note"><strong>따라서:</strong> “사전에 결과 단어가 없다 → 파생어가 아니다”라는 결론은 성립하지 않습니다. 먼저 접사 자체와 결합 조건을 확인하고, 결과 단어가 실제 사용에서 하나의 단어로 기능하는지 문맥과 교과서 분석을 함께 봅니다.</div>
+<h2 id="s8">8. 시험과 실제 분석에서 쓰는 6단계 판별 순서</h2>
+<div class="steps"><div class="step"><strong>1. 어미를 제외하고 단어 형성의 범위를 잡는다.</strong><br>용언 활용형의 어미를 파생 접사처럼 세지 않습니다.</div><div class="step"><strong>2. 가장 마지막 직접 구성 성분을 둘로 나눈다.</strong><br>사전의 붙임표를 우선적인 단서로 활용합니다.</div><div class="step"><strong>3. 각 구성 성분을 사전에서 확인한다.</strong><br>명사·관형사·어근인지, 접두사·접미사인지 실제 품사·문법 정보를 확인합니다.</div><div class="step"><strong>4. 한 구성 성분이 접사라면 파생어 가능성이 높다.</strong><br>접사가 새 단어를 만드는 기능으로 쓰였는지 확인합니다.</div><div class="step"><strong>5. 접사가 더하는 뜻과 결과 품사를 본다.</strong><br>품사가 바뀌는지 여부는 접사 기능을 이해하는 보조 단서이지 필수 조건은 아닙니다.</div><div class="step"><strong>6. 동형 어미·조사·경계 사례를 다시 점검한다.</strong><br>견해가 갈리면 교과서와 문제의 제시 기준을 우선합니다.</div></div>
+<h2>핵심만 다시 정리</h2>
+<div class="summary">파생어를 판별할 때 가장 먼저 볼 것은 <strong>품사 변화</strong>가 아니라 <strong>최종 직접 구성 성분에 실제 접사가 포함되는가</strong>입니다. 품사 변화는 접사의 기능을 파악하는 중요한 단서지만, 품사가 유지되는 파생도 있습니다. 사전의 붙임표와 접사 항목을 확인하고, 같은 모양의 어미와 구별한 뒤 최종 판정을 내립니다.</div>
+<div class="links"><a href="/learn/note/grammar/morpheme-word/">형태소와 단어 형성 전체 지도</a><a href="/learn/note/grammar/morpheme-word/multistep-word-formation/">여러 단계의 단어 형성</a><a href="/learn/note/grammar/morpheme-word/syntactic-nonsyntactic-compounds/">통사적 합성어와 비통사적 합성어</a></div>
+<h2>근거 확인</h2><ul class="source-list"><li>국립국어원 온라인가나다: 파생어·합성어는 직접 구성 성분의 접사 유무로 구분할 수 있음(2026-04-07).</li><li>국립국어원 온라인가나다: 표준국어대사전의 붙임표와 직접 구성 성분 활용법(2026-04-14).</li><li>국립국어원 온라인가나다: 접사 선정의 분석 가능성·비자립성·생산성·의미 독자성(2026-05-18).</li><li>국립국어원 온라인가나다: 반짝이다의 -이다는 동사를 만드는 접미사(2026-07-02).</li><li>국립국어원 온라인가나다: 생산적인 접사가 붙은 파생어의 사전 등재 원칙(2026-04-29).</li></ul>
+</main></body></html>
